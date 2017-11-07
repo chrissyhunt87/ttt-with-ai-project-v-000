@@ -40,7 +40,7 @@ module Players
         end
         return space
       # BLOCK OTHER PLAYER'S POSSIBLE TTTs
-    elsif win_combos.any? {|combo| board.cells[combo[0]] == self.opponent_token && board.cells[combo[1]] == self.opponent_token && board.valid_move?(board.cells[combo[2]]) || board.cells[combo[1]] == self.opponent_token && board.cells[combo[2]] == self.opponent_token && board.valid_move?(board.cells[combo[0]]) || board.cells[combo[2]] == self.opponent_token && board.cells[combo[0]] == self.opponent_token && board.valid_move?(board.cells[combo[1]])}
+      elsif win_combos.any? {|combo| board.cells[combo[0]] == self.opponent_token && board.cells[combo[1]] == self.opponent_token && board.valid_move?(board.cells[combo[2]]) || board.cells[combo[1]] == self.opponent_token && board.cells[combo[2]] == self.opponent_token && board.valid_move?(board.cells[combo[0]]) || board.cells[combo[2]] == self.opponent_token && board.cells[combo[0]] == self.opponent_token && board.valid_move?(board.cells[combo[1]])}
         space = nil
         win_combos.each do |combo|
           if board.cells[combo[0]] == self.opponent_token && board.cells[combo[1]] == self.opponent_token
