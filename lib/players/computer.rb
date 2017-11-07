@@ -62,7 +62,6 @@ module Players
             space = "#{board.cells[combo[1]]}"
           end
         end
-        binding.pry
         return space
       # STRATEGIC MOVES IF YOU CONTROL 5
       elsif board.position(5) == self.token
